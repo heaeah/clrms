@@ -1,0 +1,218 @@
+ .modal.fade .modal-dialog {
+     transform: translateY(-50px);
+     transition: transform 0.3s ease-out;
+ }
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.table th {
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn i {
+    margin-right: 4px;
+}
+
+/* Lab Cards */
+.lab-card {
+    background: linear-gradient(135deg, #e3f0fc 60%, #f8fafc 100%);
+    border: 2px solid transparent;
+    border-radius: 1.2rem;
+    transition: box-shadow 0.15s, border 0.15s, background 0.15s;
+    cursor: pointer;
+    min-height: 110px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lab-card .lab-title {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #1976d2;
+}
+.lab-card .text-muted {
+    font-size: 0.95em;
+}
+.lab-card:hover, .lab-card.border-primary {
+    border: 2.5px solid #1976d2;
+    background: linear-gradient(135deg, #e3f0fc 40%, #bbdefb 100%);
+    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.13);
+}
+.lab-card .card-body {
+    padding: 0.7rem 0.5rem;
+}
+@media (max-width: 767px) {
+    .lab-card { min-height: 90px; font-size: 0.95em; }
+}
+
+/* Category Tabs */
+#category-tabs .nav-link {
+    font-size: 1.08em;
+    font-weight: 500;
+    color: #1976d2;
+    border-radius: 0.7em 0.7em 0 0;
+    margin-right: 0.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    transition: background 0.15s, color 0.15s;
+}
+#category-tabs .nav-link.active {
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+}
+#category-tabs .nav-link:hover {
+    background: #e3f0fc;
+    color: #1565c0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+    #category-tabs .nav-link { font-size: 0.98em; padding: 0.5em 0.7em; }
+    .lab-card { margin-bottom: 0.7em; }
+}
+
+/* Table polish */
+.table thead th {
+    font-size: 1.05em;
+    font-weight: 600;
+    background: #e3f0fc;
+    color: #1976d2;
+}
+.table-hover tbody tr:hover {
+    background: #f1f8ff;
+}
+
+/* QR Code Styles for Inventory Table */
+.qr-code-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-code-image {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.qr-code-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-color: #007bff;
+}
+
+.qr-actions {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+    margin-top: 0.25rem;
+}
+
+.qr-actions .btn-xs {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.3rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.qr-actions .btn-xs:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Modal Styles */
+#qrModal .modal-dialog {
+    max-width: 500px;
+}
+
+#qrModal .modal-body {
+    padding: 2rem;
+    background: #f8f9fa;
+}
+
+#qrModal .modal-body img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#qrModal .modal-header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-bottom: none;
+}
+
+#qrModal .modal-title {
+    font-weight: 600;
+}
+
+#qrModal .btn-close {
+    filter: invert(1);
+}
+
+/* Responsive adjustments for QR codes */
+@media (max-width: 768px) {
+    .qr-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.15rem;
+    }
+    
+    .qr-actions .btn-xs {
+        width: 100%;
+        max-width: 60px;
+    }
+    
+    #qrModal .modal-dialog {
+        margin: 1rem;
+    }
+    
+    #qrModal .modal-body {
+        padding: 1rem;
+    }
+}
+
+/* Animation for QR code loading */
+.qr-code-image {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Download button pulse animation */
+.qr-actions .btn-outline-primary:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,220 @@
+.slip-box {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border: 2px solid #333;
+    padding: 5vw 2vw;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #eee;
+    width: 100%;
+}
+.slip-box, .slip-box * {
+    box-sizing: border-box;
+}
+@media (max-width: 991.98px) {
+    .slip-box {
+        padding: 5vw 2vw;
+        margin: 16px 0;
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 0;
+        text-align: center;
+    }
+    .slip-header {
+        flex-direction: column !important;
+        text-align: center;
+        align-items: center !important;
+    }
+    .slip-header .col-2, .slip-header .col-7, .slip-header .col-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .slip-header .col-3 > div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .slip-header .col-3 table {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .slip-header .col-3 table td, .slip-header .col-3 table th {
+        text-align: center !important;
+    }
+    .form-label, label, .note, .status-box, .table, .table th, .table td, .form-control, .form-select, .btn {
+        text-align: center !important;
+    }
+    .table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 767.98px) {
+    html, body {
+        font-size: 18px;
+    }
+    .slip-box {
+        padding: 6vw 2vw;
+        margin: 10px 0;
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+    .slip-title {
+        font-size: 1.15rem;
+        text-align: center;
+    }
+    .form-label, label, .note, .status-box, .table, .table th, .table td, .form-control, .form-select, .btn {
+        font-size: 1em !important;
+        text-align: center !important;
+    }
+    .form-control, .form-select, .btn {
+        font-size: 1em;
+        min-height: 2.2em;
+        padding: 0.5em 0.8em;
+        text-align: center;
+    }
+    .status-box {
+        margin-top: 10px;
+        font-size: 1em;
+        text-align: center;
+    }
+    .table-responsive {
+        font-size: 1em;
+        text-align: center;
+    }
+    .table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 575.98px) {
+    html, body {
+        font-size: 16px;
+    }
+    .slip-title {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .form-label, label, .note, .status-box, .table, .table th, .table td, .form-control, .form-select, .btn {
+        font-size: 0.98em !important;
+        text-align: center !important;
+    }
+    .form-control, .form-select, .btn {
+        font-size: 0.98em;
+        min-height: 2em;
+        padding: 0.4em 0.7em;
+        text-align: center;
+    }
+    .slip-box {
+        padding: 5vw 1vw;
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 0;
+        border-radius: 0;
+        margin: 8px 0;
+        text-align: center;
+    }
+    .table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.slip-header {
+    border-bottom: 2px solid #333;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+}
+.slip-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #333 !important;
+}
+.status-box {
+    border: 1px solid #333;
+    padding: 8px 16px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 16px;
+}
+.note {
+    font-size: 0.95em;
+    margin-top: 12px;
+    text-align: center;
+}
+.stamp-box {
+    width: 170px;
+    height: 130px;
+    border: 2px solid #222;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 8px;
+}
+.stamp-status-label {
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #222;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+}
+.stamp-circle {
+    border: 2px dashed #222;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+.stamp-controlled {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.stamp-univ {
+    font-size: 0.7em;
+    text-align: center;
+    color: #333;
+    margin-top: 2px;
+}
+@media (max-width: 767.98px) {
+    .stamp-box {
+        width: 120px;
+        height: 90px;
+        padding-top: 4px;
+    }
+    .stamp-circle {
+        width: 65px;
+        height: 65px;
+    }
+    .stamp-status-label {
+        font-size: 1em;
+    }
+    .stamp-controlled {
+        font-size: 0.95em;
+    }
+    .stamp-univ {
+        font-size: 0.6em;
+    }
+} 

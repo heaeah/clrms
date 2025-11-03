@@ -1,0 +1,206 @@
+.table-actions button { margin-right: 0.5rem; }
+.status-badge { font-size: 1em; }
+
+/* Enhanced transparency and visual indicators */
+.table-warning {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    border-left: 4px solid #ffc107 !important;
+}
+
+.table-warning:hover {
+    background-color: rgba(255, 193, 7, 0.15) !important;
+}
+
+/* Status badge enhancements */
+.badge {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
+}
+
+/* Time slot styling */
+.time-slot {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+/* Request date vs reservation period distinction */
+.request-date {
+    color: #6c757d;
+}
+
+.reservation-period {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+}
+
+.reservation-period .text-primary {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.reservation-period .text-success {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.reservation-period .text-danger {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.reservation-period .text-muted {
+    text-align: center;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+/* Enhanced table headers */
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Hover effects for better transparency */
+.table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05) !important;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Status indicators */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-current { background-color: #dc3545; }
+.status-upcoming { background-color: #198754; }
+.status-past { background-color: #6c757d; }
+.status-pending { background-color: #ffc107; }
+
+/* Enhanced statistics cards */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+/* Attachment button styling */
+.btn-outline-primary.btn-sm {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-info.btn-sm {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-primary.btn-sm:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-outline-info.btn-sm:hover {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Document section styling */
+.d-flex.flex-column.gap-1 {
+    min-height: 60px;
+}
+
+.text-muted.small {
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+/* Quick summary alert */
+.alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+    border: none;
+}
+
+ /* Responsive improvements */
+ @media (max-width: 768px) {
+     .table-responsive {
+         font-size: 0.875rem;
+     }
+     
+     .badge {
+         font-size: 0.7rem !important;
+         padding: 0.4rem 0.6rem !important;
+     }
+ }
+ 
+ /* ID Photo Modal styling */
+ #idPhotoModal .modal-content {
+     border: none;
+     border-radius: 12px;
+     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+ }
+ 
+ #idPhotoModal .modal-header {
+     border-radius: 12px 12px 0 0;
+     background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);
+ }
+ 
+ #idPhotoModal .modal-body {
+     padding: 2rem;
+ }
+ 
+ #idPhotoModal .id-photo-container {
+     background: #f8f9fa;
+     border-radius: 8px;
+     padding: 1rem;
+     border: 1px solid #dee2e6;
+ }
+ 
+ #idPhotoModal .id-photo-container img {
+     border-radius: 6px;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+     transition: transform 0.2s ease;
+ }
+ 
+ #idPhotoModal .id-photo-container img:hover {
+     transform: scale(1.02);
+ }
+ 
+ #idPhotoModal .modal-footer {
+     border-radius: 0 0 12px 12px;
+     background: #f8f9fa;
+ }
+ 
+ #idPhotoModal .btn-info {
+     background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);
+     border: none;
+     transition: all 0.2s ease;
+ }
+ 
+ #idPhotoModal .btn-info:hover {
+     transform: translateY(-1px);
+     box-shadow: 0 4px 8px rgba(13, 202, 240, 0.3);
+ } 

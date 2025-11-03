@@ -1,0 +1,75 @@
+.slip-box {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border: 2px solid #333;
+    padding: 32px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #eee;
+}
+.slip-header {
+    border-bottom: 2px solid #333;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+}
+.slip-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.status-box {
+    border: 1px solid #333;
+    padding: 8px 16px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 16px;
+}
+.note {
+    font-size: 0.95em;
+    margin-top: 12px;
+}
+.lab-checkboxes label {
+    margin-right: 18px;
+}
+.lab-checkboxes label.lab-disabled {
+    opacity: 0.5;
+    pointer-events: auto;
+    cursor: not-allowed;
+    background: #f8d7da;
+    border-radius: 4px;
+}
+.lab-checkboxes label.lab-disabled input[type="radio"] {
+    cursor: not-allowed;
+}
+.stamp-box {
+    width: 170px;
+    height: 130px;
+    border: 2px solid #222;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 8px;
+}
+.stamp-status-label {
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #222;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+}
+@media (max-width: 767.98px) {
+    .stamp-box {
+        width: 120px;
+        height: 90px;
+        padding-top: 4px;
+    }
+    .stamp-status-label {
+        font-size: 1em;
+    }
+} 

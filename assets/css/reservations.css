@@ -1,0 +1,8 @@
+main {
+    margin-left: 250px; /* adjust if your sidebar width is different */
+}
+@media (max-width: 991.98px) {
+    main {
+        margin-left: 0;
+    }
+}

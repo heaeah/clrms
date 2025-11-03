@@ -1,0 +1,347 @@
+/* Maintenance Page Styles */
+
+/* Maintenance Cards - Matching Inventory Design */
+.maintenance-card {
+    background: linear-gradient(135deg, #ffffff 60%, #f8fafc 100%);
+    border: 2px solid transparent;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    min-height: 120px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    position: relative;
+}
+
+.maintenance-card .card-body {
+    padding: 1.5rem 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.maintenance-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Color-coded borders based on status */
+.maintenance-card.border-primary {
+    border: 3px solid #0d6efd;
+    background: linear-gradient(135deg, #e3f0fc 0%, #ffffff 100%);
+}
+
+.maintenance-card.border-primary:hover {
+    border: 3px solid #0d6efd;
+    background: linear-gradient(135deg, #e3f0fc 0%, #bbdefb 100%);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.15);
+}
+
+.maintenance-card.border-danger {
+    border: 3px solid #dc3545;
+    background: linear-gradient(135deg, #ffeaea 0%, #ffffff 100%);
+}
+
+.maintenance-card.border-danger:hover {
+    border: 3px solid #dc3545;
+    background: linear-gradient(135deg, #ffeaea 0%, #ffcdd2 100%);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.15);
+}
+
+.maintenance-card.border-warning {
+    border: 3px solid #ffc107;
+    background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
+}
+
+.maintenance-card.border-warning:hover {
+    border: 3px solid #ffc107;
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.15);
+}
+
+.maintenance-card.border-success {
+    border: 3px solid #198754;
+    background: linear-gradient(135deg, #e8f5e8 0%, #ffffff 100%);
+}
+
+.maintenance-card.border-success:hover {
+    border: 3px solid #198754;
+    background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+    box-shadow: 0 6px 20px rgba(25, 135, 84, 0.15);
+}
+
+.maintenance-card.border-info {
+    border: 3px solid #0dcaf0;
+    background: linear-gradient(135deg, #e1f5fe 0%, #ffffff 100%);
+}
+
+.maintenance-card.border-info:hover {
+    border: 3px solid #0dcaf0;
+    background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%);
+    box-shadow: 0 6px 20px rgba(13, 202, 240, 0.15);
+}
+
+.maintenance-card.border-secondary {
+    border: 3px solid #6c757d;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.maintenance-card.border-secondary:hover {
+    border: 3px solid #6c757d;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.15);
+}
+
+/* Responsive maintenance cards */
+@media (max-width: 767px) {
+    .maintenance-card { 
+        min-height: 100px; 
+        font-size: 0.95em; 
+    }
+    .maintenance-card .card-body {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .maintenance-card { 
+        min-height: 90px; 
+        font-size: 0.9em; 
+    }
+    .maintenance-card .card-body {
+        padding: 0.75rem 0.5rem;
+    }
+    .maintenance-card .card-body h4 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem !important;
+    }
+    .maintenance-card .card-body p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+    .maintenance-card .card-body .fw-bold {
+        font-size: 1.2em !important;
+    }
+}
+
+/* Table Improvements */
+.table th {
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Badge Improvements */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.5em 0.75em;
+}
+
+/* Modal Improvements */
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+/* Form Improvements */
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Button Improvements */
+.btn-group-sm .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Alert Improvements */
+.alert {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* Empty State */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .btn-group-sm .btn {
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* Hover Effects */
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Filter Card */
+.card .card-body {
+    background-color: #f8f9fa;
+}
+
+/* Due Maintenance Alert */
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Collapse Animation */
+.collapse {
+    transition: all 0.3s ease;
+}
+
+/* Text Truncation */
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Equipment Name Styling */
+.equipment-name {
+    font-weight: 600;
+    color: #212529;
+}
+
+.equipment-serial {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Sidebar Responsiveness - Simple and compatible */
+.main {
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+/* Let JavaScript handle the dynamic layout */
+
+/* Container responsiveness */
+.container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Enhanced container spacing for maintenance and repair pages */
+.container-fluid.px-4 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+@media (max-width: 768px) {
+    .container-fluid.px-4 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid.px-4 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+}
+
+/* Card responsiveness */
+.card {
+    margin-bottom: 1rem;
+}
+
+/* Table responsiveness */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Stats cards responsiveness */
+@media (max-width: 1200px) {
+    .col-md-2 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    /* Improve mobile layout */
+    .d-flex.align-items-center.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 1rem;
+    }
+    
+    .d-flex.align-items-center.justify-content-between > div:last-child {
+        align-self: stretch;
+    }
+    
+    .d-flex.align-items-center.justify-content-between .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    /* Mobile-specific improvements */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.8rem;
+    }
+    
+    .btn-group-sm .btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Improve modal responsiveness */
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+    
+    /* Improve form layout on mobile */
+    .row.g-3 > .col-md-6,
+    .row.g-3 > .col-12 {
+        margin-bottom: 1rem;
+    }
+} 

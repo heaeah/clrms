@@ -1,0 +1,447 @@
+/* ICT Portal Specific Styles */
+
+/* Override main styles for ICT portal */
+body.ict-portal {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.ict-portal .main-content {
+    margin-left: 300px;
+    padding: 0;
+    min-height: 100vh;
+    width: calc(100% - 300px);
+    position: relative;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+/* Mobile: full width when sidebar is hidden */
+@media (max-width: 767.98px) {
+    .ict-portal .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+.ict-portal .container-fluid {
+    padding: 1rem !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Fix sidebar positioning for ICT portal */
+.ict-portal .sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 300px !important;
+    height: 100vh !important;
+    background: white !important;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1) !important;
+    z-index: 1050 !important;
+    transition: left 0.3s ease !important;
+    overflow-y: auto !important;
+    transform: none !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.ict-portal .sidebar.show {
+    left: 0 !important;
+}
+
+/* Hide sidebar on mobile by default */
+@media (max-width: 767.98px) {
+    .ict-portal .sidebar {
+        left: -300px !important;
+    }
+    
+    .ict-portal .sidebar.show {
+        left: 0 !important;
+    }
+}
+
+/* Force sidebar visibility on desktop */
+@media (min-width: 768px) {
+    .ict-portal .sidebar {
+        left: 0;
+        display: block;
+        visibility: visible;
+    }
+    
+    .ict-portal .sidebar.show {
+        left: 0 !important;
+    }
+    
+    .ict-portal .sidebar.collapsed {
+        left: -300px !important;
+    }
+    
+    .ict-portal .main-content {
+        margin-left: 300px;
+        width: calc(100% - 300px);
+        transition: margin-left 0.3s ease, width 0.3s ease;
+    }
+    
+    .ict-portal .main-content.sidebar-collapsed {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Fix main content when sidebar is shown */
+.ict-portal .main-content.sidebar-open {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Remove any top margin/padding that might cause white space */
+.ict-portal .main-content > .container-fluid {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Ensure no unwanted spacing */
+.ict-portal .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.ict-portal .col-md-3,
+.ict-portal .col-md-4,
+.ict-portal .col-md-6,
+.ict-portal .col-md-8,
+.ict-portal .col-12 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+.ict-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+}
+
+.ict-hero h1 {
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ict-hero .lead {
+    opacity: 0.9;
+}
+
+/* KPI Cards */
+.kpi-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.kpi-card.equipment { 
+    border-left-color: #28a745; 
+}
+
+.kpi-card.maintenance { 
+    border-left-color: #ffc107; 
+}
+
+.kpi-card.support { 
+    border-left-color: #dc3545; 
+}
+
+.kpi-card.software { 
+    border-left-color: #17a2b8; 
+}
+
+.kpi-card h3 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.kpi-card h6 {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Quick Actions */
+.quick-action {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quick-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    color: inherit;
+    text-decoration: none;
+}
+
+.quick-action i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #667eea;
+    transition: color 0.3s ease;
+}
+
+.quick-action:hover i {
+    color: #5a6fd8;
+}
+
+.quick-action .fw-bold {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.quick-action small {
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+/* Alert Items */
+.alert-item {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.alert-item:hover {
+    transform: translateX(2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alert-item.urgent {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-item .d-flex {
+    align-items: flex-start;
+}
+
+.alert-item i {
+    margin-top: 0.25rem;
+}
+
+.alert-item strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.alert-item small {
+    color: #6c757d;
+}
+
+/* Activity Table */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    background: #f8f9fa;
+    border: none;
+    font-weight: 600;
+    color: #495057;
+    padding: 1rem;
+}
+
+.table td {
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Badge Styles */
+.badge {
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+
+/* Card Headers */
+.card-header {
+    border: none;
+    font-weight: 600;
+}
+
+.card-header.bg-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.card-header.bg-warning {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+}
+
+.card-header.bg-light {
+    background: #f8f9fa !important;
+    color: #495057 !important;
+}
+
+/* Avatar Styles */
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ict-hero {
+        padding: 1.5rem 0;
+        margin-bottom: 1rem;
+    }
+    
+    .ict-hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .kpi-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .quick-action {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .alert-item {
+        padding: 0.75rem;
+    }
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success States */
+.success-state {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Error States */
+.error-state {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .sidebar-overlay,
+    .btn,
+    .quick-action {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+    }
+    
+    .kpi-card,
+    .alert-item {
+        break-inside: avoid;
+    }
+}
